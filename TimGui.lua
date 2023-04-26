@@ -261,3 +261,5 @@ if SpamActive then
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(Spam.Text, "All")
 end
 end
+
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
