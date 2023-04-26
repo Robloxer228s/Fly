@@ -233,10 +233,13 @@ game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function(Character
 if not exit then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/Fly/main/TimGui.lua"))()
 game.Workspace.TimCheat:Destroy()
+end
+end)
+
+game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Died:Connect(function()
 blocksDown = false
 SpeedChanger = false
 JumpChanger = false
-end
 end)
 
 local TimCheatFolder = Instance.new("Folder")
@@ -262,4 +265,3 @@ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageReque
 end
 end
 
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
