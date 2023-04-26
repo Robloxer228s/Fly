@@ -1,3 +1,4 @@
+local OnDiedScript = game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/Fly/main/TimGui.lua")
 local gui = Instance.new("ScreenGui")
 gui.Parent = game.Players.LocalPlayer.PlayerGui
 gui.Name = "TimCheat"
@@ -231,7 +232,7 @@ button12.Activated:Connect(b12)
 
 game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function(Character)
 if not exit then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/Fly/main/TimGui.lua"))()
+loadstring(OnDiedScript)()
 game.Workspace.TimCheat:Destroy()
 end
 end)
