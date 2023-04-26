@@ -118,6 +118,8 @@ button12.Position = UDim2.new(0,84,0,168)
 button12.Parent = gui
 button12.Text = "Spin"
 
+local exit = false
+
 local function b1()
 gui:Destroy()
 guiHide:Destroy()
@@ -125,6 +127,7 @@ game.Workspace.TimCheat:Destroy()
 blocksDown = false
 SpeedChanger = false
 JumpChanger = false
+exit = true
 end
 
 local function b2()
@@ -227,10 +230,13 @@ button11.Activated:Connect(b11)
 button12.Activated:Connect(b12)
 
 game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function(Character)
+if not exit then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/Fly/main/TimGui.lua"))()
 game.Workspace.TimCheat:Destroy()
 blocksDown = false
 SpeedChanger = false
 JumpChanger = false
+end
 end)
 
 local TimCheatFolder = Instance.new("Folder")
