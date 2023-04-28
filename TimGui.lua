@@ -1,6 +1,3 @@
-if _G.OnDiedScript == false then
-local _G.OnDiedScript = game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/Fly/main/TimGui.lua", all)
-end
 local gui = Instance.new("ScreenGui")
 gui.Parent = game.Players.LocalPlayer.PlayerGui
 gui.Name = "TimCheat"
