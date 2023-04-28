@@ -201,7 +201,7 @@ loadstring(game:HttpGet("https://realzzhub.xyz/script.lua"))()
 end
 
 local function b12()
-Spiner = not blocksDown
+Spiner = not Spiner
 if Spiner then
 button12.BackgroundColor3 = Color3.new(0.5,1,0.5)
 power = Spin.Text -- change this to make it more or less powerful
