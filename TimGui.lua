@@ -238,7 +238,7 @@ if not exit then
 game.Workspace.TimCheat:Destroy()
 wait(0.1)
 print(OnDiedScript)
-loadstring(OnDiedScript)()
+loadstring(_G.OnDiedScript)()
 end
 end)
 
