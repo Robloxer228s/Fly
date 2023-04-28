@@ -1,3 +1,4 @@
+--please use this: loadstring(game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/Loader/main/2.lua"))()
 local gui = Instance.new("ScreenGui")
 gui.Parent = game.Players.LocalPlayer.PlayerGui
 gui.Name = "TimCheat"
