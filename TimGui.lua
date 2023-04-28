@@ -102,7 +102,7 @@ local button12 = Instance.new("TextButton")
 button12.SizeConstraint = "RelativeYY"
 button12.Size = UDim2.new(0,42,0,42)
 button12.BackgroundColor3 = Color3.new(1,0.5,0.5)
-button12.Position = UDim2.new(0,126,0,126)
+button12.Position = UDim2.new(0,168,0,126)
 button12.Parent = gui
 button12.Text = "Spin"
 
