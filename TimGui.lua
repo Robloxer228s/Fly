@@ -253,18 +253,24 @@ local function b14()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/Loader/main/" .. Loader.Text .. ".lua"))()
 end
 
-local ListTXT = game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/Loader/main/ScriptList.txt")
+local player = game.Players.LocalPlayer
+
+local mouse = player:GetMouse()
+x = mouse.ViewSizeX
+y = mouse.ViewSizeY
+
 local function b15()
 List = not List
 if List then
+local ListTXT = game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/Loader/main/ScriptList.txt")
 button15.BackgroundColor3 = Color3.new(0.5,1,0.5)
 local listText = Instance.new("TextLabel")
 listText.SizeConstraint = "RelativeYY"
 listText.Size = UDim2.new(0,168,0,720)
 listText.BackgroundColor3 = Color3.new(0.5,0.5,0.5)
-listText.Position = UDim2.new(0,1350,0,0)
+listText.Position = UDim2.new(0,x - 210,0,0)
 listText.Parent = gui
-listText.Text = list
+listText.Text = ListTXT
 listText.Name = List
 else
 button15.BackgroundColor3 = Color3.new(1,0.5,0.5)
