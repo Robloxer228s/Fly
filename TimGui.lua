@@ -236,6 +236,8 @@ button12.Activated:Connect(b12)
 game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function(Character)
 if not exit then
 game.Workspace.TimCheat:Destroy()
+wait(0.1)
+print(OnDiedScript)
 loadstring(OnDiedScript)()
 end
 end)
