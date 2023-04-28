@@ -1,9 +1,11 @@
 local gui = Instance.new("ScreenGui")
 gui.Parent = game.Players.LocalPlayer.PlayerGui
 gui.Name = "TimCheat"
+gui.DisplayOrder = 999
 local guiHide = Instance.new("ScreenGui")
 guiHide.Parent = game.Players.LocalPlayer.PlayerGui
 guiHide.Name = "TimHide"
+guiHide.DisplayOrder = 999
 local button4 = Instance.new("TextButton")
 button4.SizeConstraint = "RelativeYY"
 button4.Size = UDim2.new(0,42,0,42)
@@ -89,32 +91,18 @@ button9.BackgroundColor3 = Color3.new(0.5,0.5,1)
 button9.Position = UDim2.new(0,42,0,126)
 button9.Parent = gui
 button9.Text = "InfYeld"
-local button10 = Instance.new("TextButton")
-button10.SizeConstraint = "RelativeYY"
-button10.Size = UDim2.new(0,42,0,42)
-button10.BackgroundColor3 = Color3.new(0.5,0.5,1)
-button10.Position = UDim2.new(0,84,0,126)
-button10.Parent = gui
-button10.Text = "MM2"
-local button11 = Instance.new("TextButton")
-button11.SizeConstraint = "RelativeYY"
-button11.Size = UDim2.new(0,84,0,42)
-button11.BackgroundColor3 = Color3.new(0.5,0.5,1)
-button11.Position = UDim2.new(0,126,0,126)
-button11.Parent = gui
-button11.Text = "LuckyBlocks"
 local Spin = Instance.new("TextBox")
 Spin.SizeConstraint = "RelativeYY"
 Spin.Size = UDim2.new(0,84,0,42)
 Spin.BackgroundColor3 = Color3.new(0.5,0.5,0.5)
-Spin.Position = UDim2.new(0,0,0,168)
+Spin.Position = UDim2.new(0,84,0,126)
 Spin.Parent = gui
 Spin.Text = "SpinSpeed"
 local button12 = Instance.new("TextButton")
 button12.SizeConstraint = "RelativeYY"
 button12.Size = UDim2.new(0,42,0,42)
 button12.BackgroundColor3 = Color3.new(1,0.5,0.5)
-button12.Position = UDim2.new(0,84,0,168)
+button12.Position = UDim2.new(0,126,0,126)
 button12.Parent = gui
 button12.Text = "Spin"
 
@@ -192,14 +180,6 @@ local function b9()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
 end
 
-local function b10()
-loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
-end
-
-local function b11()
-loadstring(game:HttpGet("https://realzzhub.xyz/script.lua"))()
-end
-
 local function b12()
 Spiner = not Spiner
 if Spiner then
@@ -232,8 +212,6 @@ button6.Activated:Connect(b6)
 button7.Activated:Connect(b7)
 button8.Activated:Connect(b8)
 button9.Activated:Connect(b9)
-button10.Activated:Connect(b10)
-button11.Activated:Connect(b11)
 button12.Activated:Connect(b12)
 
 game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function(Character)
