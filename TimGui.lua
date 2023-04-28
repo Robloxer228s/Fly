@@ -120,17 +120,17 @@ button13.Parent = gui
 button13.Text = "NoClip"
 
 local Loader = Instance.new("TextBox")
-Speed.SizeConstraint = "RelativeYY"
-Speed.Size = UDim2.new(0,84,0,42)
-Speed.BackgroundColor3 = Color3.new(0.5,0.5,0.5)
-Speed.Position = UDim2.new(0,42,0,168)
-Speed.Parent = gui
-Speed.Text = "Loader"
+Loader.SizeConstraint = "RelativeYY"
+Loader.Size = UDim2.new(0,84,0,42)
+Loader.BackgroundColor3 = Color3.new(0.5,0.5,0.5)
+Loader.Position = UDim2.new(0,42,0,168)
+Loader.Parent = gui
+Loader.Text = "Loader"
 
 local button14 = Instance.new("TextButton")
 button14.SizeConstraint = "RelativeYY"
 button14.Size = UDim2.new(0,42,0,42)
-button14.BackgroundColor3 = Color3.new(1,0.5,0.5)
+button14.BackgroundColor3 = Color3.new(0.5,0.5,1)
 button14.Position = UDim2.new(0,126,0,168)
 button14.Parent = gui
 button14.Text = "Load"
@@ -249,6 +249,29 @@ button13.BackgroundColor3 = Color3.new(1,0.5,0.5)
 end
 end
 
+local function b14()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/Loader/main/" .. Loader.Text .. ".lua"))()
+end
+
+local ListTXT = game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/Loader/main/ScriptList.txt")
+local function b15()
+List = not List
+if List then
+button15.BackgroundColor3 = Color3.new(0.5,1,0.5)
+local listText = Instance.new("TextLabel")
+listText.SizeConstraint = "RelativeYY"
+listText.Size = UDim2.new(0,168,0,720)
+listText.BackgroundColor3 = Color3.new(0.5,0.5,0.5)
+listText.Position = UDim2.new(0,1350,0,0)
+listText.Parent = gui
+listText.Text = list
+listText.Name = List
+else
+button15.BackgroundColor3 = Color3.new(1,0.5,0.5)
+gui.List:Destroy()
+end
+end
+
 button1.Activated:Connect(b1)
 button2.Activated:Connect(b2)
 button3.Activated:Connect(b3)
@@ -260,6 +283,8 @@ button8.Activated:Connect(b8)
 button9.Activated:Connect(b9)
 button12.Activated:Connect(b12)
 button13.Activated:Connect(b13)
+button14.Activated:Connect(b14)
+button15.Activated:Connect(b15)
 
 game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function(Character)
 if not exitB then
