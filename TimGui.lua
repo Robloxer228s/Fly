@@ -1,6 +1,5 @@
 if not loaded == true then
 local OnDiedScript = game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/Fly/main/TimGui.lua", all)
-print(game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/Fly/main/TimGui.lua", all))
 end
 local loaded = true
 local gui = Instance.new("ScreenGui")
@@ -239,7 +238,7 @@ if not exit then
 game.Workspace.TimCheat:Destroy()
 wait(0.1)
 print(OnDiedScript)
-loadstring(OnDiedScript)()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/Fly/main/TimGui.lua", all))()
 end
 end)
 
