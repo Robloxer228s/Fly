@@ -29,7 +29,11 @@ button1.Text = "Exit"
 local button2 = Instance.new("TextButton")
 button2.SizeConstraint = "RelativeYY"
 button2.Size = UDim2.new(0,42,0,42)
+if blocksDown then
+button2.BackgroundColor3 = Color3.new(0.5,1,0.5)
+else
 button2.BackgroundColor3 = Color3.new(1,0.5,0.5)
+end
 button2.Position = UDim2.new(0,42,0,0)
 button2.Parent = gui
 button2.Text = "Blocks"
@@ -50,7 +54,11 @@ Speed.Text = _G.SpeedTim
 local button5 = Instance.new("TextButton")
 button5.SizeConstraint = "RelativeYY"
 button5.Size = UDim2.new(0,42,0,42)
+if SpeedChanger then
+button5.BackgroundColor3 = Color3.new(0.5,1,0.5)
+else
 button5.BackgroundColor3 = Color3.new(1,0.5,0.5)
+end
 button5.Position = UDim2.new(0,168,0,0)
 button5.Parent = gui
 button5.Text = "Set"
@@ -64,7 +72,11 @@ Jump.Text = _G.JumpTim
 local button6 = Instance.new("TextButton")
 button6.SizeConstraint = "RelativeYY"
 button6.Size = UDim2.new(0,42,0,42)
+if JumpChanger then
+button6.BackgroundColor3 = Color3.new(0.5,1,0.5)
+else
 button6.BackgroundColor3 = Color3.new(1,0.5,0.5)
+end
 button6.Position = UDim2.new(0,168,0,42)
 button6.Parent = gui
 button6.Text = "Set"
@@ -78,7 +90,11 @@ Spam.Text = _G.SpamTim
 local button7 = Instance.new("TextButton")
 button7.SizeConstraint = "RelativeYY"
 button7.Size = UDim2.new(0,42,0,42)
+if SpamActive then
+button7.BackgroundColor3 = Color3.new(0.5,1,0.5)
+else
 button7.BackgroundColor3 = Color3.new(1,0.5,0.5)
+end
 button7.Position = UDim2.new(0,168,0,84)
 button7.Parent = gui
 button7.Text = "Spam"
@@ -114,7 +130,11 @@ button12.Text = "Spin"
 local button13 = Instance.new("TextButton")
 button13.SizeConstraint = "RelativeYY"
 button13.Size = UDim2.new(0,42,0,42)
+if NoClip then
+button13.BackgroundColor3 = Color3.new(0.5,1,0.5)
+else
 button13.BackgroundColor3 = Color3.new(1,0.5,0.5)
+end
 button13.Position = UDim2.new(0,0,0,168)
 button13.Parent = gui
 button13.Text = "NoClip"
@@ -301,6 +321,7 @@ end)
 
 game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Died:Connect(function()
 exit = true
+Spiner = false
 end)
 
 local TimCheatFolder = Instance.new("Folder")
