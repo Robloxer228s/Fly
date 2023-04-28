@@ -275,9 +275,9 @@ end
 if SpamActive then
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(Spam.Text, "All")
 end
-game.Players.LocalPlayer.Character.Head.CanCollide = NoClip
-game.Players.LocalPlayer.Character.UpperTorso.CanCollide = NoClip
-game.Players.LocalPlayer.Character.LowerTorso.CanCollide = NoClip
-game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = NoClip
+game.Players.LocalPlayer.Character.Head.CanCollide = not NoClip
+game.Players.LocalPlayer.Character.UpperTorso.CanCollide = not NoClip
+game.Players.LocalPlayer.Character.LowerTorso.CanCollide = not NoClip
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = not NoClip
 end
 end
