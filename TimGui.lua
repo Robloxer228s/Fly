@@ -239,7 +239,7 @@ if not exit then
 game.Workspace.TimCheat:Destroy()
 wait(0.1)
 print(OnDiedScript)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/Fly/main/TimGui.lua", all))()
+loadstring(OnDiedScript)()
 end
 end)
 
