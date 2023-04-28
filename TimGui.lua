@@ -1,4 +1,4 @@
-if _G.OnDiedScript == nil then
+if _G.OnDiedScript == false then
 local _G.OnDiedScript = game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/Fly/main/TimGui.lua", all)
 end
 local loaded = true
