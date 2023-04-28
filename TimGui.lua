@@ -13,6 +13,12 @@ button4.BackgroundColor3 = Color3.new(1,0.5,0.5)
 button4.Position = UDim2.new(0,0,0,0)
 button4.Parent = guiHide
 button4.Text = "Hide"
+gui.Enabled = _G.HideTim
+if not gui.Enabled then
+button4.BackgroundColor3 = Color3.new(0.5,1,0.5)
+else
+button4.BackgroundColor3 = Color3.new(1,0.5,0.5)
+end
 local button1 = Instance.new("TextButton")
 button1.SizeConstraint = "RelativeYY"
 button1.Size = UDim2.new(0,42,0,42)
@@ -105,16 +111,22 @@ button12.BackgroundColor3 = Color3.new(1,0.5,0.5)
 button12.Position = UDim2.new(0,168,0,126)
 button12.Parent = gui
 button12.Text = "Spin"
+local button13 = Instance.new("TextButton")
+button13.SizeConstraint = "RelativeYY"
+button13.Size = UDim2.new(0,42,0,42)
+button13.BackgroundColor3 = Color3.new(1,0.5,0.5)
+button13.Position = UDim2.new(0,0,0,168)
+button13.Parent = gui
+button13.Text = "NoClip"
 
 local exit = false
+local exitB = false
 
 local function b1()
 gui:Destroy()
 guiHide:Destroy()
 game.Workspace.TimCheat:Destroy()
-blocksDown = false
-SpeedChanger = false
-JumpChanger = false
+exitB = true
 exit = true
 end
 
@@ -143,6 +155,7 @@ button4.BackgroundColor3 = Color3.new(0.5,1,0.5)
 else
 button4.BackgroundColor3 = Color3.new(1,0.5,0.5)
 end
+_G.HideTim = gui.Enabled
 end
 
 local function b5()
@@ -203,6 +216,15 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.BodyThrust:Destroy()
 end
 end
 
+local function b13()
+NoClip = not NoClip
+if NoClip then
+button13.BackgroundColor3 = Color3.new(0.5,1,0.5)
+else
+button13.BackgroundColor3 = Color3.new(1,0.5,0.5)
+end
+end
+
 button1.Activated:Connect(b1)
 button2.Activated:Connect(b2)
 button3.Activated:Connect(b3)
@@ -213,9 +235,10 @@ button7.Activated:Connect(b7)
 button8.Activated:Connect(b8)
 button9.Activated:Connect(b9)
 button12.Activated:Connect(b12)
+button13.Activated:Connect(b13)
 
 game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function(Character)
-if not exit then
+if not exitB then
 game.Workspace.TimCheat:Destroy()
 wait(0.1)
 print(_G.OnDiedScript)
@@ -227,6 +250,7 @@ game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Died:Connect(functio
 blocksDown = false
 SpeedChanger = false
 JumpChanger = false
+exit = true
 end)
 
 local TimCheatFolder = Instance.new("Folder")
@@ -235,6 +259,7 @@ TimCheatFolder.Name = "TimCheat"
 local Size = Vector3.new(0,3.62,0)
 while true do
 wait(0.01)
+if not exit then
 if blocksDown == true then
 local BlockD = Instance.new("Part")
 BlockD.Parent = TimCheatFolder
@@ -250,5 +275,9 @@ end
 if SpamActive then
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(Spam.Text, "All")
 end
+game.Players.LocalPlayer.Character.Head.CanCollide = NoClip
+game.Players.LocalPlayer.Character.UpperTorso.CanCollide = NoClip
+game.Players.LocalPlayer.Character.LowerTorso.CanCollide = NoClip
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = NoClip
 end
-
+end
