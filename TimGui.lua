@@ -113,7 +113,7 @@ Spin.Text = "SpinSpeed"
 local button12 = Instance.new("TextButton")
 button12.SizeConstraint = "RelativeYY"
 button12.Size = UDim2.new(0,42,0,42)
-button12.BackgroundColor3 = Color3.new(0.5,0.5,1)
+button12.BackgroundColor3 = Color3.new(1,0.5,0.5)
 button12.Position = UDim2.new(0,84,0,168)
 button12.Parent = gui
 button12.Text = "Spin"
@@ -201,8 +201,8 @@ loadstring(game:HttpGet("https://realzzhub.xyz/script.lua"))()
 end
 
 local function b12()
-blocksDown = not blocksDown
-if blocksDown then
+Spin = not blocksDown
+if Spin then
 button12.BackgroundColor3 = Color3.new(0.5,1,0.5)
 power = Spin.Text -- change this to make it more or less powerful
  
@@ -219,7 +219,7 @@ bambam.Force = Vector3.new(power,0,power)
 bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
 else
 button12.BackgroundColor3 = Color3.new(1,0.5,0.5)
-bambam:Destroy()
+game.Players.LocalPlayer.Character.HumanoidRootPart.BodyThrust:Destroy()
 end
 end
 
