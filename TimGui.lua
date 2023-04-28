@@ -271,7 +271,7 @@ listText.BackgroundColor3 = Color3.new(0.5,0.5,0.5)
 listText.Position = UDim2.new(0,x - 210,0,0)
 listText.Parent = gui
 listText.Text = ListTXT
-listText.Name = List
+listText.Name = "List"
 else
 button15.BackgroundColor3 = Color3.new(1,0.5,0.5)
 gui.List:Destroy()
