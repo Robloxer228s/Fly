@@ -1,4 +1,4 @@
-if not loaded then
+if not loaded == true then
 local OnDiedScript = game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/Fly/main/TimGui.lua")
 end
 local loaded = true
