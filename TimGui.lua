@@ -1,6 +1,7 @@
-if not loaded == true then
+if not loaded then
 local OnDiedScript = game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/Fly/main/TimGui.lua", all)
 end
+print(not loaded)
 local loaded = true
 local gui = Instance.new("ScreenGui")
 gui.Parent = game.Players.LocalPlayer.PlayerGui
