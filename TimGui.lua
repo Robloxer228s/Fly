@@ -119,6 +119,30 @@ button13.Position = UDim2.new(0,0,0,168)
 button13.Parent = gui
 button13.Text = "NoClip"
 
+local Loader = Instance.new("TextBox")
+Speed.SizeConstraint = "RelativeYY"
+Speed.Size = UDim2.new(0,84,0,42)
+Speed.BackgroundColor3 = Color3.new(0.5,0.5,0.5)
+Speed.Position = UDim2.new(0,42,0,168)
+Speed.Parent = gui
+Speed.Text = "Loader"
+
+local button14 = Instance.new("TextButton")
+button14.SizeConstraint = "RelativeYY"
+button14.Size = UDim2.new(0,42,0,42)
+button14.BackgroundColor3 = Color3.new(1,0.5,0.5)
+button14.Position = UDim2.new(0,126,0,168)
+button14.Parent = gui
+button14.Text = "Load"
+
+local button15 = Instance.new("TextButton")
+button15.SizeConstraint = "RelativeYY"
+button15.Size = UDim2.new(0,42,0,42)
+button15.BackgroundColor3 = Color3.new(1,0.5,0.5)
+button15.Position = UDim2.new(0,168,0,168)
+button15.Parent = gui
+button15.Text = "List"
+
 local exit = false
 local exitB = false
 
