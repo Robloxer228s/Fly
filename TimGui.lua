@@ -329,5 +329,9 @@ game.Players.LocalPlayer.Character.Head.CanCollide = not NoClip
 game.Players.LocalPlayer.Character.UpperTorso.CanCollide = not NoClip
 game.Players.LocalPlayer.Character.LowerTorso.CanCollide = not NoClip
 game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = not NoClip
+_G.SpeedTim = Speed.Text
+_G.JumpTim = Jump.Text
+_G.SpamTim = Spam.Text
+_G.SpinTim = Spin.Text
 end
 end
