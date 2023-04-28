@@ -201,6 +201,9 @@ loadstring(game:HttpGet("https://realzzhub.xyz/script.lua"))()
 end
 
 local function b12()
+blocksDown = not blocksDown
+if blocksDown then
+button12.BackgroundColor3 = Color3.new(0.5,1,0.5)
 power = Spin.Text -- change this to make it more or less powerful
  
 game:GetService('RunService').Stepped:connect(function()
@@ -214,6 +217,10 @@ local bambam = Instance.new("BodyThrust")
 bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
 bambam.Force = Vector3.new(power,0,power)
 bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+else
+button12.BackgroundColor3 = Color3.new(1,0.5,0.5)
+bambam:Destroy()
+end
 end
 
 button1.Activated:Connect(b1)
