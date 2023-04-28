@@ -295,16 +295,11 @@ button15.Activated:Connect(b15)
 game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function(Character)
 if not exitB then
 game.Workspace.TimCheat:Destroy()
-wait(0.1)
-print(_G.OnDiedScript)
 loadstring(_G.OnDiedScript)()
 end
 end)
 
 game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Died:Connect(function()
-blocksDown = false
-SpeedChanger = false
-JumpChanger = false
 exit = true
 end)
 
