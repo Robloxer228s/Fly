@@ -244,12 +244,6 @@ if Spiner then
 button12.BackgroundColor3 = Color3.new(0.5,1,0.5)
 power = Spin.Text -- change this to make it more or less powerful
  
-game:GetService('RunService').Stepped:connect(function()
-game.Players.LocalPlayer.Character.Head.CanCollide = false
-game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
-game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
-game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
-end)
 wait(.1)
 local bambam = Instance.new("BodyThrust")
 bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
