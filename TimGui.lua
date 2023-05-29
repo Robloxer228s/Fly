@@ -1,4 +1,5 @@
 --please use this: loadstring(game:HttpGet("https://raw.githubusercontent.com/Robloxer228s/Loader/main/2.lua"))()
+NoClip = False
 local gui = Instance.new("ScreenGui")
 gui.Parent = game.Players.LocalPlayer.PlayerGui
 gui.Name = "TimCheat"
