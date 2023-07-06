@@ -263,6 +263,29 @@ button13.BackgroundColor3 = Color3.new(0.5,1,0.5)
 else
 button13.BackgroundColor3 = Color3.new(1,0.5,0.5)
 end
+ 
+	if NoClip = false then
+		Clipon = true
+		Status.Text = "on"
+		Status.TextColor3 = Color3.new(0,185,0)
+		Stepped = game:GetService("RunService").Stepped:Connect(function()
+			if not Clipon == false then
+				for a, b in pairs(Workspace:GetChildren()) do
+                if b.Name == Plr.Name then
+                for i, v in pairs(Workspace[Plr.Name]:GetChildren()) do
+                if v:IsA("BasePart") then
+                v.CanCollide = false
+                end end end end
+			else
+				Stepped:Disconnect()
+			end
+		end)
+	elseif NoClip = true then
+		Clipon = false
+		Status.Text = "off"
+		Status.TextColor3 = Color3.new(170,0,0)
+	end
+ 
 end
 
 local function b14()
@@ -342,10 +365,10 @@ end
 if SpamActive then
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(Spam.Text, "All")
 end
-game.Players.LocalPlayer.Character.Head.CanCollide = not NoClip
-game.Players.LocalPlayer.Character.UpperTorso.CanCollide = not NoClip
-game.Players.LocalPlayer.Character.LowerTorso.CanCollide = not NoClip
-game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = not NoClip
+--game.Players.LocalPlayer.Character.Head.CanCollide = not NoClip
+--game.Players.LocalPlayer.Character.UpperTorso.CanCollide = not NoClip
+--game.Players.LocalPlayer.Character.LowerTorso.CanCollide = not NoClip
+--game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = not NoClip
 _G.SpeedTim = Speed.Text
 _G.JumpTim = Jump.Text
 _G.SpamTim = Spam.Text
