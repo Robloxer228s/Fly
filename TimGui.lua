@@ -256,6 +256,10 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.BodyThrust:Destroy()
 end
 end
 
+local Players = game:GetService("Players")
+local Plr = Players.LocalPlayer
+local Clipon = false
+
 local function b13()
 NoClip = not NoClip
 if NoClip then
@@ -264,10 +268,8 @@ else
 button13.BackgroundColor3 = Color3.new(1,0.5,0.5)
 end
  
-	if NoClip = false then
+	if NoClip = true then
 		Clipon = true
-		Status.Text = "on"
-		Status.TextColor3 = Color3.new(0,185,0)
 		Stepped = game:GetService("RunService").Stepped:Connect(function()
 			if not Clipon == false then
 				for a, b in pairs(Workspace:GetChildren()) do
@@ -280,10 +282,8 @@ end
 				Stepped:Disconnect()
 			end
 		end)
-	elseif NoClip = true then
+	elseif NoClip = false then
 		Clipon = false
-		Status.Text = "off"
-		Status.TextColor3 = Color3.new(170,0,0)
 	end
  
 end
@@ -349,6 +349,11 @@ TimCheatFolder.Name = "TimCheat"
 local Size = Vector3.new(0,3.62,0)
 while true do
 wait(0.01)
+whil()
+end
+end
+
+local function whil()
 if not exit then
 if blocksDown == true then
 local BlockD = Instance.new("Part")
@@ -373,5 +378,4 @@ _G.SpeedTim = Speed.Text
 _G.JumpTim = Jump.Text
 _G.SpamTim = Spam.Text
 _G.SpinTim = Spin.Text
-end
 end
