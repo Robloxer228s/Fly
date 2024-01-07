@@ -268,7 +268,7 @@ else
 button13.BackgroundColor3 = Color3.new(1,0.5,0.5)
 end
  
-	if NoClip = true then
+	if NoClip == true then
 		Clipon = true
 		Stepped = game:GetService("RunService").Stepped:Connect(function()
 			if not Clipon == false then
